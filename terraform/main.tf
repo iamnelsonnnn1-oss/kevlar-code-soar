@@ -21,7 +21,7 @@ resource "aws_security_group" "ansible_lab_sg" {
 # 2. Create the Managed Node (Ubuntu Server)
 resource "aws_instance" "managed_node" {
   ami           = "ami-0084a47cc718c111a" # Ubuntu 24.04 LTS in eu-central-1
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.ansible_lab_sg.id]
 
   tags = {
