@@ -25,6 +25,6 @@ resource "aws_instance" "managed_node" {
   vpc_security_group_ids = [aws_security_group.ansible_lab_sg.id]
 
   tags = {
-    Name = "Ansible-Managed-Node"
+    Name = "Kevlar-Core-SOAR"
   }
 }
