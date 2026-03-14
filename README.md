@@ -1,4 +1,4 @@
-# 🛡️ Kevlar-Code-SOAR: Autonomous Defense & Active SIEM
+# Kevlar-Code-SOAR: Autonomous Defense & Active SIEM
 
 **Kevlar-Code-SOAR** is a high-performance, agentless Security Orchestration, Automation, and Response (SOAR) engine. Built on the principle of **Immutable Defense**, it leverages Terraform and Ansible to provision, harden, and automatically defend cloud infrastructure in the **European Zone (eu-central-1)**.
 
