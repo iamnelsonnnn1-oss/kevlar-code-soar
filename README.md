@@ -1,30 +1,27 @@
-# 🛡️ Kevlar-Code-SOAR: Autonomous Defense & Active SIEM
+# Kevlar-Code-SOAR 🛡️
 
-**Kevlar-Code-SOAR** is a high-performance, agentless Security Orchestration, Automation, and Response (SOAR) engine. Built on the principle of **Immutable Defense**, it leverages Terraform and Ansible to provision, harden, and automatically defend cloud infrastructure in the **European Zone (eu-central-1)**.
+A fully automated, Infrastructure-as-Code (IaC) driven Security Operations Center (SOC). This project implements a modular SOAR, EDR, and SIEM pipeline with a focus on dynamic, reusable configurations.
 
----
+## 🏗️ Project Hierarchy (The Blocks)
 
-## 🚀 The Kevlar-Code "Trifecta"
-* **Infrastructure (Terraform)**: Rapid provisioning of hardened **t3.medium** nodes with segmented Security Groups.
-* **Orchestration (Ansible)**: Agentless configuration management, OS hardening, and automated threat remediation.
-* **Intelligence (Docker/ELK)**: A containerized SIEM core (Elasticsearch, Logstash, Kibana) for real-time log correlation and alerting.
+### Infrastructure
+* **Cloud:** AWS (EC2, VPC, SG)
+* **Provisioning:** Terraform (Zero Hard-Coding)
 
----
+### Configuration
+* **Environment:** Docker
+* **Automation:** Ansible (Modular Roles)
 
-## ⚡ Key Features: "Active Defense"
-Unlike passive monitoring tools, Kevlar-Code-SOAR focuses on **Interdiction**:
-1.  **NIDS/HIDS Integration**: Combined Network (Suricata) and Host (Wazuh) intrusion detection.
-2.  **Autonomous Block**: Automated Ansible handlers that "kill-switch" malicious IPs at the firewall level upon detection.
-3.  **Zero-Footprint**: 100% agentless deployment—no heavy software installed on target servers.
+### Security Stack
+* **SOAR:** Tines (Orchestration & Playbooks)
+* **EDR:** LimaCharlie (Endpoint Detection & Response)
+* **IDS/IPS:** Suricata (Network Detection)
+* **SIEM:** ELK Stack (Intelligence & Visualization)
 
-
-
----
-
-## 🏗️ Quick Start Guide
-1.  **Provision the Nest**: `cd terraform && terraform apply`
-2.  **Initialize the Engine**: `ansible-playbook site.yml`
-3.  **Defend**: Access the UI on port **5601** to view active telemetry and automated blocks.
+## 🚀 Principles
+* **Dynamic:** No hard-coded values; all environment specifics are handled via variables.
+* **Reusable:** Modular architecture designed to deploy in any region (Default: European Zone).
+* **Git-First:** All changes follow a strict pre-check and documentation workflow.
 
 ---
-*Architected for Performance and Scalability by [Nelson Ortiz](https://github.com/iamnelsonnnn1-oss)*
+*Built by Nelson Ortiz*
