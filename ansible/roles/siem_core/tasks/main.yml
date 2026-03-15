@@ -5,6 +5,12 @@
     state: directory
     mode: '0755'
 
+- name: 📄 Deploy Docker Compose Template
+  template:
+    src: docker-compose.yml.j2
+    dest: "/opt/{{ project_name }}/siem/docker-compose.yml"
+    mode: '0644'
+
 - name: 🧠 Deploy ELK Stack via Docker Compose
   community.docker.docker_compose:
     project_src: "/opt/{{ project_name }}/siem"
